@@ -1,5 +1,8 @@
 package staff;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import static jdk.nashorn.internal.objects.NativeMath.round;
 
 public class Employee {
@@ -36,6 +39,10 @@ public class Employee {
     }
 
     public double payBonus() {
-        BigDecimal bonus = new BigDecimal(this.salary / 100);
+
+        String salaryConvertedToStringFromDouble = String.valueOf(salary/ 100); // this convert double into a string
+        BigDecimal bonusRoundedAsString = new BigDecimal(salaryConvertedToStringFromDouble);
+        bonusRoundedAsString = bonusRoundedAsString.setScale(2, RoundingMode.HALF_UP);
+        return bonusRoundedAsString.doubleValue();
     }
 }
