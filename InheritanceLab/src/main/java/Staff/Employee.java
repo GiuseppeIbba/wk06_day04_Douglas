@@ -2,9 +2,9 @@ package Staff;
 
 public class Employee {
 
-    private String name;
-    private String ni;
-    private double salary;
+    protected String name;
+    protected String ni;
+    protected double salary;
 
 
     public Employee(String name, String ni, double salary) {
@@ -27,5 +27,13 @@ public class Employee {
     public double getSalary() {
         Double copySalary = this.salary;
         return copySalary;
+    }
+
+    public void raiseSalary(double increase) {
+        this.salary += increase;
+    }
+
+    public double payBonus() {
+        return this.salary / 100;
     }
 }
