@@ -1,4 +1,6 @@
-package Staff;
+package staff;
+
+import static jdk.nashorn.internal.objects.NativeMath.round;
 
 public class Employee {
 
@@ -34,6 +36,6 @@ public class Employee {
     }
 
     public double payBonus() {
-        return this.salary / 100;
+        BigDecimal bonus = new BigDecimal(this.salary / 100);
     }
 }

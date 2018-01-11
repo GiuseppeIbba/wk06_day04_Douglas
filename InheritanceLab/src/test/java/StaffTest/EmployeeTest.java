@@ -1,6 +1,6 @@
-package StaffTest;
+package staffTest;
 
-import Staff.Employee;
+import staff.Employee;
 import org.junit.Before;
 import org.junit.Test;
 
